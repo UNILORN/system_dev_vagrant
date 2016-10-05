@@ -36,6 +36,14 @@ vagrant導入
 初期設定
   初期化スクリプトを取ってくる
 
+  wget https://raw.githubusercontent.com/sizukutamago/system_dev_vagrant/master/init.sh
+
+  chmod 755 init.sh
+  で権限の変更
+
+  ./init.sh
+  で初期化
+
 laravelの入れ方
   使用する場所にlaravelをclone
     git clone https://github.com/laravel/laravel.git

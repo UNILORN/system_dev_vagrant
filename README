@@ -1,0 +1,53 @@
+virtualbox導入
+  https://www.virtualbox.org/wiki/Downloads
+    からdownload
+
+vagrant導入
+  https://www.vagrantup.com/
+    からdownload
+
+  installしたら
+
+  任意のディレクトリで
+
+  vagrant box add xenial64 https://atlas.hashicorp.com/ubuntu/boxes/xenial64/versions/20160521.0.0/providers/virtualbox.box
+
+    でboxを追加
+
+  vagrant init xenial64
+
+    でboxを初期化
+
+  vagrant up
+
+    で起動
+
+  vagrant ssh
+
+    で接続
+
+ネットワーク設定
+  virtualboxの設定内のネットワークのホストオンリーネットワークのネットワークアダプタを追加で
+    192.168.56.11/255.255.255.0
+  を設定
+
+   virtualboxのubuntu16の設定内のネットワークのネットワーク２でアダプタを有効化を有効化し、名前がvboxnetのやつにする
+
+初期設定
+  初期化スクリプトを取ってくる
+
+laravelの入れ方
+  使用する場所にlaravelをclone
+    git clone https://github.com/laravel/laravel.git
+  composerのinstall
+    cd laravel
+    sudo composer install
+  各種権限の変更
+    chown -R www-data.www-data laravel
+    chmod -R 755 laravel
+    chmod -R 777 laravel/app/storage
+
+
+mysql
+    ID:root
+    パスワード:root
